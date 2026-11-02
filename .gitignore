@@ -1,0 +1,40 @@
+# ---------------------------------------------------------------- big things
+# Datasets: ~3 GB of tiles. They live in Google Drive, see README.
+data/
+*.zip
+
+# Model checkpoints: ~5 MB each, rewritten on every run.
+*.pt
+*.onnx
+*.engine
+
+# The previous student's repo (https://github.com/jmartinpizarro/carla).
+# Cloned separately so the two histories stay apart.
+carla/
+
+# Conference PDFs, under their publishers' copyright. research/papers.md has
+# the titles and links; fetch them yourself.
+papers/
+
+# Qualitative prediction dumps from Ultralytics val (20 MB of jpgs).
+# The PR/F1 curves next to them are small and are kept.
+experiments/**/val_batch*.jpg
+
+# ------------------------------------------------- generated / machine-local
+# Round file lists and eval-set yamls hold ABSOLUTE paths, so they are only
+# valid on the machine that made them. make_rounds.py / evaluate_matrix.py
+# rebuild them in seconds.
+experiments/warm_start/rounds/
+experiments/warm_start/rounds_high_first/
+experiments/warm_start/eval_sets/
+experiments/warm_start/runs/
+quick_test/
+
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Typst build leftovers
+*.aux
